@@ -23,7 +23,7 @@ const PostWidget = ({ categories, slug }) => {
                 { slug ? "Related Posts" : "Recent Posts" }
             </h3>
             {relatedPosts.map(post => (
-                <div className="flex items-center w-full mb-4" key={post.title}>
+                <div className="flex items-center w-full mb-4 transition duration-200 transform hover:translate-x-1" key={post.title}>
                     <div className="w-16 flex-none">
                         <img 
                             src={post.featuredImage.url}
