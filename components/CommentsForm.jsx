@@ -32,7 +32,7 @@ const CommentsForm = ({ slug }) => {
 
         if(storeData) {
             window.localStorage.setItem("name", name);
-            window.localStorage.setItem("name", name);
+            window.localStorage.setItem("email", email);
         } else {
             window.localStorage.removeItem("name", name);
             window.localStorage.removeItem("email", email);
@@ -46,7 +46,6 @@ const CommentsForm = ({ slug }) => {
                     setShowSuccessMessage(false);
                 }, 3000)
             });
-
     }
 
     return (

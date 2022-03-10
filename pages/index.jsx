@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { PostCard, Categories, PostWidget } from "../components";
+import FeaturedPosts from "../sections/FeaturedPosts";
 import { getPosts } from "../services/getPosts";
 
 const Home = ({ posts }) => {
@@ -10,6 +11,7 @@ const Home = ({ posts }) => {
         <title>CMS BLOF</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
             {posts.map((post, index) => <PostCard post={post.node} key={index} />)}
